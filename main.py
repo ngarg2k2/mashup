@@ -24,6 +24,7 @@ if(len(mp4_files)>0):
 flag=0
 end=0
 import streamlit as st
+import time
 import os
 st.title('Mashup:musical_note::musical_note::musical_note:')
 st.write('Made by Nipun Garg')
@@ -106,6 +107,16 @@ if st.button('Submit'):
 #         for file in glob.glob(os.path.join(folder, '*.mp4')):
 #             os.remove(file)
 
+
+
+#############################################################
+        progress_text = "Operation in progress. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+#############################################################
 
 
 if(flag==1):
