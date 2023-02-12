@@ -29,7 +29,7 @@ st.title('Mashup:musical_note::musical_note::musical_note:')
 st.write('Made by Nipun Garg')
 name=st.text_input("Singer Name")
 n=int(st.number_input("No. of videos",step=1))
-duration=int(st.number_input("Duration",step=1))
+duration=int(st.number_input("Duration(in seconds)",step=1))
 
 Email=st.text_input("Email id")
 if st.button('Submit'):
@@ -51,12 +51,9 @@ if st.button('Submit'):
         for i in range(0,n):    
             Download(link[i])
 
-
         directory = os.getcwd()
-
-
+        
         files = os.listdir(directory)
-
 
         mp4_files = [file for file in files if file.endswith('.mp4')]
 
@@ -90,7 +87,6 @@ if st.button('Submit'):
 
 # Trim the audio file
         merged_audio = audio.subclip(0,0)
-        
 
         for i in range(0,len(mp3_files)):
             audio = AudioFileClip(mp3_files[i])
