@@ -75,9 +75,6 @@ if st.button('Submit'):
         #from pydub import AudioSegment
 
         import os
-        #AudioSegment.converter = r"C:\Users\91700\Documents\Python\pyAI3.7\Scripts\ffmpeg.exe"
-        #AudioSegment.ffmpeg = r"C:\Users\91700\Documents\Python\pyAI3.7\Scripts\ffmpeg.exe"
-        #AudioSegment.ffprobe = r"C:\Users\91700\Documents\Python\pyAI3.7\Scripts\ffprobe.exe"
 
         directory = os.getcwd()
 
@@ -132,9 +129,9 @@ if(flag==1):
 
         
 # Email credentials
-        from_email = "ishaan191201@gmail.com"
+        from_email = "ngarg2k2testing@gmail.com"
         to_email = Email
-        password = "erwqtvswrvcnokry"
+        password = "cfhmoxuzbzlpexii"
 
 # Email settings
         subject = "Zip file attached"
