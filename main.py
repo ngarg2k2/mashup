@@ -35,6 +35,15 @@ duration=int(st.number_input("Duration(in seconds)",step=1))
 Email=st.text_input("Email id")
 if st.button('Submit'):
     
+    
+#############################################################
+        progress_text = "Operation in progress. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+#############################################################
         from youtube_search import YoutubeSearch
         results = YoutubeSearch(name, max_results=n).to_dict()
         link=['https://www.youtube.com/'+results[i]['url_suffix'] for i in range(n)]
@@ -109,14 +118,7 @@ if st.button('Submit'):
 
 
 
-#############################################################
-        progress_text = "Operation in progress. Please wait."
-        my_bar = st.progress(0, text=progress_text)
 
-        for percent_complete in range(100):
-            time.sleep(0.1)
-            my_bar.progress(percent_complete + 1, text=progress_text)
-#############################################################
 
 
 if(flag==1):
