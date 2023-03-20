@@ -19,8 +19,6 @@ if(len(mp4_files)>0):
     for file in glob.glob(os.path.join(folder, '*.mp4')):
         os.remove(file)
 
-
-
 flag=0
 end=0
 import streamlit as st
